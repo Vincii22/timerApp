@@ -4,16 +4,65 @@
     text-decoration: none;
     list-style-type: none;
 }
-body{
-    background-color: #070707;
+body {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;         /* or use 'contain' if you want full visibility without cropping */
+    background-position: center center;
+    background-attachment: fixed;   /* optional: keeps background fixed during scroll */
 }
+
 
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.dateTime{
-    /* background-color: wheat; */
-    height: 10vh;
-    width: 100%;
+.time-container{
+
+}
+.dateTime {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+
+.timer{
+    background-color: #ffd4d1;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    box-shadow: black;
+}
+.msgInput{
+
+}
+.msgInput input{
+    border: none;
+    padding: 1vw;
+    width: 20vw;
+    border-radius: 25vw;
+    background-color: #ffd4d1;
+    border: 2px solid black;
+}
+.msgInput button{
+    background-color: black;
+    padding: 0.8vh;
+    color: white;
+}
+
+.setTimer{
+    margin-bottom: 2vh;
 }

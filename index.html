@@ -8,24 +8,37 @@
     <script src="./assets/js/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="dateTime">
-            <div class="currentDate" id="currentDate"></div>
-            <div class="currentTime" id="currentTime"></div>
-        </div>
-
+    <div class="dateTime">
+        <div class="currentDate" id="currentDate"></div>
+        <div class="currentTime" id="currentTime"></div>
+    </div>
+<div class="container">
+    <div class="time-container">
         <div class="msgInput">
-            <input type="text" placeholder="Enter a message to display after the timer runs out...">
-            <button>Submit</button>
+            <input type="text" id="messageInput" placeholder="Enter a message to display after the timer runs out...">
+            <button onclick="saveMessage()">Submit</button>
         </div>
 
         <div class="setTimer">
+            <div class="time">
+                <label for="">Hours</label>
+                <input type="number" id="hoursInput" min="0" max="23" value="0" placeholder="Hours">
+            </div>
+            <div class="time">
+                <label for="">Minutes</label>
+                <input type="number" id="minutesInput" min="0" max="59" value="0" placeholder="Minutes">
+            </div>
 
+            <input type="number" id="secondsInput" min="0" max="59" value="0" placeholder="Seconds">
+
+            <button onclick="setTimer()">Start Timer</button>
         </div>
 
         <div class="timer">
-
+            <div class="timerDisplay"></div>
         </div>
     </div>
+</div>
+
 </body>
 </html>
