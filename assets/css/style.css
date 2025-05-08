@@ -5,7 +5,7 @@
     list-style-type: none;
 }
 body {
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;         /* or use 'contain' if you want full visibility without cropping */
     background-position: center center;
@@ -14,6 +14,8 @@ body {
 
 
 .container{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,19 +37,50 @@ body {
 }
 
 
-.timer{
-    background-color: #ffd4d1;
-    width: 50vw;
+.timer {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    width: 35vw;
     height: 40vh;
     border-radius: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5rem;
-    box-shadow: black;
-}
-.msgInput{
+    color: white;
 
+    /* Initial multicolor glow */
+    box-shadow:
+        0 0 30px 10px rgba(0, 255, 0, 0.3),
+        0 0 60px 20px rgba(0, 128, 255, 0.3),
+        0 0 90px 30px rgba(128, 0, 255, 0.3),
+        0 0 120px 40px rgba(255, 255, 255, 0.3);
+
+    /* Animate the glow */
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 30px 10px rgba(0, 255, 0, 0.3),
+            0 0 60px 20px rgba(0, 128, 255, 0.3),
+            0 0 90px 30px rgba(128, 0, 255, 0.3),
+            0 0 120px 40px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow:
+            0 0 50px 20px rgba(0, 255, 0, 0.6),
+            0 0 80px 30px rgba(0, 128, 255, 0.6),
+            0 0 110px 40px rgba(128, 0, 255, 0.6),
+            0 0 150px 50px rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+.msgInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .msgInput input{
     border: none;
@@ -65,4 +98,32 @@ body {
 
 .setTimer{
     margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+.time{
+    display: flex;
+    flex-direction: column;
+}
+.time input{
+    background-color: gray;
+    padding: 1rem;
+    border: 1px solid white;
+    margin-right: 2vw;
+}
+
+/* button {
+    padding: 10px 20px;
+    background-color: #f86a4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #e55b3d;
+} */

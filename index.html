@@ -28,15 +28,20 @@
                 <label for="">Minutes</label>
                 <input type="number" id="minutesInput" min="0" max="59" value="0" placeholder="Minutes">
             </div>
-
-            <input type="number" id="secondsInput" min="0" max="59" value="0" placeholder="Seconds">
-
-            <button onclick="setTimer()">Start Timer</button>
+            <div class="time">
+                <label for="">Seconds</label>
+                <input type="number" id="secondsInput" min="0" max="59" value="0" placeholder="Seconds">
+            </div>
         </div>
+
+        <button onclick="setTimer()">Start Timer</button>
 
         <div class="timer">
             <div class="timerDisplay"></div>
+            <audio id="beepSound" src="./assets/sounds/beep.mp3" preload="auto"></audio>
+
         </div>
+        <button onclick="stopSpeaking()">Stop</button>
     </div>
 </div>
 
